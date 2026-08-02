@@ -263,7 +263,16 @@ const firebaseConfig = {
 };
 
 const database = getDatabase(app);
+    import { ref, set } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-database.js";
 
+set(ref(database, "teste"), {
+  mensagem: "Primeiro salvamento da Queijaria Helena",
+  data: new Date().toLocaleString()
+});
+
+console.log("Teste salvo no banco");
+    
+    
 console.log("Banco de dados conectado - Queijaria Helena");
 
 console.log("Firebase conectado - Queijaria Helena");
