@@ -7,36 +7,46 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #fff8e7;
-  padding: 20px;
+  background:#fff8e7;
+  padding:20px;
 }
 
 h1 {
-  text-align: center;
-  color: #7a4b20;
+  color:#7a4b20;
+  text-align:center;
 }
 
 .caixa {
-  background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
+  background:white;
+  padding:20px;
+  margin:15px 0;
+  border-radius:12px;
 }
 
-input, button {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 8px;
+input, select, button {
+  padding:10px;
+  margin:5px;
+  border-radius:8px;
 }
 
 button {
-  background: #7a4b20;
-  color: white;
-  border: none;
+  background:#7a4b20;
+  color:white;
+  border:0;
 }
 
-.titulo {
-  color: #7a4b20;
+h2 {
+  color:#7a4b20;
+}
+
+table {
+  width:100%;
+  background:white;
+}
+
+td, th {
+  padding:8px;
+  border-bottom:1px solid #ddd;
 }
 </style>
 
@@ -45,66 +55,105 @@ button {
 <body>
 
 <h1>🌿 Queijaria Helena</h1>
-<h2 style="text-align:center;">Painel de Controle</h2>
+<h2 style="text-align:center">Painel de Controle</h2>
 
-<div class="caixa">
-<h2 class="titulo">🧀 Produtos</h2>
-
-
-<input type="date">
 
 <div class="caixa">
 
-<h2 class="titulo">💰 Lançar Venda</h2>
+<h2>🧀 Cadastro de Produtos</h2>
+
+<input placeholder="Produto">
+
+<input placeholder="Quantidade">
+
+<input placeholder="Preço">
+
+<button>Cadastrar</button>
+
+</div>
+
+
+<div class="caixa">
+
+<h2>💰 Controle de Vendas</h2>
 
 <input type="date">
 
-<input placeholder="Nome do cliente">
+<input placeholder="Cliente">
 
-<input placeholder="Nome do vendedor">
+<input placeholder="Vendedor">
 
 <input placeholder="Produto vendido">
 
 <input placeholder="Quantidade">
 
-<input placeholder="Valor da venda">
+<input placeholder="Valor">
 
 <select>
 <option>Pix</option>
 <option>Dinheiro</option>
 <option>Cartão</option>
+<option>Fiado</option>
 </select>
 
 <button>Registrar Venda</button>
 
-</div>
+</div><div class="caixa">
+
+<h2>📒 Controle de Fiado</h2>
+
+<input type="date">
+
+<input placeholder="Nome do cliente">
+
+<input placeholder="Produto">
+
+<input placeholder="Valor fiado">
+
+<select>
+<option>Pendente</option>
+<option>Pago</option>
+</select>
+
+<button>Registrar Fiado</button>
+
 </div>
 
 
 <div class="caixa">
 
-<h2 class="titulo">💰 Lançar Venda</h2>
+<h2>💸 Financeiro</h2>
 
-<input placeholder="Produto vendido">
-<input placeholder="Valor da venda">
+<input type="date">
 
-<button>Registrar Venda</button>
+<input placeholder="Descrição da movimentação">
+
+<select>
+<option>Entrada</option>
+<option>Saída</option>
+</select>
+
+<input placeholder="Valor">
+
+<button>Registrar Financeiro</button>
 
 </div>
 
 
 <div class="caixa">
 
-<h2 class="titulo">📊 Financeiro</h2>
+<h2>📊 Resumo</h2>
 
 <p>Total vendido: R$ 0,00</p>
 
-<p>Custos: R$ 0,00</p>
+<p>Total recebido: R$ 0,00</p>
 
-<p>Lucro: R$ 0,00</p>
+<p>Total fiado: R$ 0,00</p>
+
+<p>Total despesas: R$ 0,00</p>
+
+<p><strong>Lucro estimado: R$ 0,00</strong></p>
 
 </div>
-
-
 </body>
 </html>
