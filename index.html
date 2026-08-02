@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="pt-br"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Queijaria Helena Mini</title>
+<style>body{font-family:Arial;margin:20px}input,button{margin:4px;padding:8px}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:6px}</style>
+</head><body>
+<h1>Queijaria Helena Mini</h1>
+<h2>Produto</h2>
+<input id="nome" placeholder="Nome"><input id="preco" type="number" placeholder="Preço"><input id="estoque" type="number" placeholder="Estoque">
+<button onclick="add()">Salvar</button>
+<h2>Venda</h2>
+<select id="lista"></select><input id="qtd" type="number" value="1"><button onclick="vender()">Vender</button>
+<h2>Produtos</h2><table><thead><tr><th>Nome</th><th>Preço</th><th>Estoque</th></tr></thead><tbody id="tb"></tbody></table>
+<h2>Total vendido hoje: R$ <span id="total">0.00</span></h2>
+<script>
+let p=JSON.parse(localStorage.p||"[]"),t=+localStorage.t||0;
+function salvar(){localStorage.p=JSON.stringify(p);localStorage.t=t;render();}
+function render(){tb.innerHTML="";lista.innerHTML="";p.forEach((x,i)=>{tb.innerHTML+=`<tr><td>${x.n}</td><td>${x.v.toFixed(2)}</td><td>${x.e}</td></tr>`;lista.innerHTML+=`<option value="${i}">${x.n}</option>`});total.textContent=t.toFixed(2)}
+function add(){p.push({n:nome.value,v:+preco.value,e:+estoque.value});nome.value=preco.value=estoque.value="";salvar();}
+function vender(){let i=+lista.value,q=+qtd.value;if(!p[i]||p[i].e<q)return alert("Estoque insuficiente");p[i].e-=q;t+=q*p[i].v;salvar();}
+render();
+</script></body></html>
