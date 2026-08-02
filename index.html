@@ -1,66 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Queijaria Helena</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #fff8e7;
-  padding: 30px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
-
-h1 {
-  color: #7a4b20;
+body{
+    background:#f7f1e8;
+    color:#4a2e18;
 }
-
-h2 {
-  color: #7a4b20;
+header{
+    background:#6d4c41;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
 }
-
-p {
-  font-size: 18px;
+header h1{
+    font-size:38px;
 }
-
-.botao {
-  display: inline-block;
-  background: #7a4b20;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+.banner{
+    width:100%;
+    height:230px;
+    background:url("https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=1200&q=80") center/cover;
+}
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:20px;
+}
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+h2{
+    color:#6d4c41;
+    margin-bottom:15px;
+}
+.item{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+.item:last-child{
+    border:none;
+}
+.preco{
+    font-weight:bold;
+}
+.botao{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    padding:18px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    margin:30px 0;
+}
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:#fff;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:32px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
 }
 </style>
 
 </head>
-
 <body>
 
-<h1>Queijaria Helena</h1>
+<header>
+<h1>🧀 Queijaria Helena</h1>
+<p>Tradição, qualidade e o verdadeiro sabor da fazenda.</p>
+</header>
 
-<p>🌿 O sabor da fazenda feito com carinho 🌿</p>
+<div class="banner"></div>
 
-<h2>Nossos produtos</h2>
+<div class="container">
 
-<p>🧀 Muçarela da Fazenda</p>
-<p>🍮 Doce de Leite Tradicional</p>
-<p>🍮 Doce de Leite com Coco</p>
-<p>🍮 Doce de Leite com Ameixa</p>
-<p>🧀 Queijos artesanais</p>
+<div class="card">
+<h2>🧀 Queijos</h2>
 
-<h2>Sobre nós</h2>
+<div class="item"><span>Queijo Grande</span><span class="preco">R$ 30,00</span></div>
+<div class="item"><span>Queijo Pequeno</span><span class="preco">R$ 20,00</span></div>
+<div class="item"><span>Cabacinha Recheada com Doce de Leite</span><span class="preco">R$ 55,00</span></div>
+<div class="item"><span>Cabacinha Recheada com Goiabada</span><span class="preco">R$ 55,00</span></div>
+<div class="item"><span>Barra de Muçarela</span><span class="preco">R$ 50,00</span></div>
+<div class="item"><span>Nozinho de Muçarela (500 g)</span><span class="preco">R$ 50,00</span></div>
+<div class="item"><span>Muçarela com Salame</span><span class="preco">R$ 50,00</span></div>
+</div>
 
-<p>
-Produtos feitos artesanalmente com leite fresco,
-mantendo a tradição e o sabor da fazenda.
-</p>
+<div class="card">
+<h2>✨ Queijos Trufados</h2>
 
-<a class="botao" href="https://wa.me/5518991145877" target="_blank">
-Faça seu pedido pelo WhatsApp
+<div class="item"><span>Trufado de Goiabada</span><span class="preco">R$ 45,00</span></div>
+<div class="item"><span>Trufado de Doce de Leite</span><span class="preco">R$ 45,00</span></div>
+<div class="item"><span>Trufado de Requeijão</span><span class="preco">R$ 50,00</span></div>
+</div>
+
+<div class="card">
+<h2>🥛 Doces</h2>
+
+<div class="item"><span>Doce de Leite Tradicional (500 g)</span><span class="preco">R$ 25,00</span></div>
+<div class="item"><span>Doce de Leite com Coco (500 g)</span><span class="preco">R$ 27,00</span></div>
+</div>
+
+<a class="botao" href="https://wa.me/5518991145877?text=Olá!%20Vi%20o%20cardápio%20da%20Queijaria%20Helena%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank">
+🛒 Fazer Pedido pelo WhatsApp
 </a>
 
+</div>
+
+<a class="whatsapp" href="https://wa.me/5518991145877?text=Olá!%20Vi%20o%20cardápio%20da%20Queijaria%20Helena%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank">
+💬
+</a>
+
+<footer>
+Queijaria Helena © 2026
+</footer>
 
 </body>
 </html>
