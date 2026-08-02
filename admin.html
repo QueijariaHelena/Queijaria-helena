@@ -251,10 +251,10 @@ td, th {
   <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-database.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBjFoW4BZTU4X7dkEVlBX9InNcm--S8M0",
+  apiKey: "SUA_CHAVE",
   authDomain: "queijaria-helena-dfdf0.firebaseapp.com",
   projectId: "queijaria-helena-dfdf0",
   storageBucket: "queijaria-helena-dfdf0.firebasestorage.app",
@@ -262,9 +262,15 @@ const firebaseConfig = {
   appId: "1:1020803928097:web:50610296cf82d47d77d360"
 };
 
-const database = getDatabase(app);
-    import { ref, set } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-database.js";
+const app = initializeApp(firebaseConfig);
 
+const database = getDatabase(app);
+
+set(ref(database, "teste"), {
+  mensagem: "Primeiro teste Queijaria Helena"
+});
+
+console.log("Firebase e banco conectados");
 set(ref(database, "teste"), {
   mensagem: "Primeiro salvamento da Queijaria Helena",
   data: new Date().toLocaleString()
